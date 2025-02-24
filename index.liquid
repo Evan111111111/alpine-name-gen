@@ -3,3 +3,12 @@ layout: layout.liquid
 title: 11ty Boilerplate
 ---
 
+<div x-data="{ 
+    names: ['Jason', 'Logan', 'Evan', 'Aaron', 'Zoe', 'Jasper', 'Steven', 'Drew', 'Brendan', 'Jack'], 
+    randomName: 'Click the button to generate a name' 
+}">
+    <h1 x-text="randomName"></h1>
+    <button @click="randomName = names[Math.floor(Math.random() * names.length)]">
+        Generate Name
+    </button>
+</div>
